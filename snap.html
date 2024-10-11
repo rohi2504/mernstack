@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapchat Sign-In Clone</title>
+    <link rel="stylesheet" href="snap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="snapchat-logo">
+            <img src="https://1000logos.net/wp-content/uploads/2017/08/Snapchat-logo.png" alt="Snapchat Logo" height="50cm">
+        </div>
+
+        <div class="login-box">
+            <h1>Sign In to Snapchat</h1>
+            <form action="">
+                <div class="input-box">
+                    <input type="text" id="username" name="username"  required>
+                    <label for="username">Username or Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                    <!-- Custom SVG eye icon -->
+                    <span class="toggle-password" onclick="togglePassword()">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="eyeIcon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </span>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <button type="submit"><a href="https://accounts.snapchat.com/accounts/v2/login"><center>Sign In</center></a></button>
+                
+            </form>
+            <div class="forgot">
+                <a href="https://accounts.snapchat.com/accounts/password_reset_request">Forgot Password?</a>
+            </div>
+            
+            <div class="signup">
+                <p>New to Snapchat? <a href="https://accounts.snapchat.com/accounts/v2/signup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                // Update SVG path for "eye slash" effect
+                eyeIcon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path><path d="M4.93 4.93l14.14 14.14"></path>';
+            } else {
+                passwordField.type = 'password';
+                // Restore the original eye SVG
+                eyeIcon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path><circle cx="12" cy="12" r="3"></circle>';
+            }
+        }
+    </script>
+     
+</body>
+</html>

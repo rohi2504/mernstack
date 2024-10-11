@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffc00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.snapchat-logo img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 59px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 39px;
+    font-size: 23px;
+    color: #000;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 17px;
+    font-size: 17px;
+    box-decoration-break: slice;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    color: #000;
+    font-size: 12px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 18px;
+}
+
+.toggle-password:hover {
+    color: #000;
+}
+
+.remember-me {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    color: #edede3;
+    background-color: #000;
+    color: #e6e0e0;
+    border: none;
+    border-radius: 17px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #686565;
+}
+
+.forgot,
+.signup {
+    margin-top: 21px;
+}
+
+a {
+    color: #adb920;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
